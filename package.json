@@ -1,0 +1,21 @@
+{
+  "name": "joy-control",
+  "version": "1.0.0",
+  "description": "Control your PC with a Joy Con",
+  "main": "src/index.js",
+  "repository": "https://github.com/jakehamilton/joy-control",
+  "author": "Jake Hamilton <jake@jakehamilton.dev>",
+  "license": "Apache-2.0",
+  "bin": "./src/index.js",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "arg": "^4.1.0",
+    "patch-package": "^6.1.2",
+    "pkg": "^4.4.0",
+    "robotjs": "^0.5.1",
+    "switch-joy-con": "^1.1.1",
+    "toml": "^3.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+[left]
+[left.stick]
+action = "mouse"
+# Speed of the mouse in px when moving with this stick
+speed = 20
+# Poll this stick every 500ms
+poll = 500
+
+[right]
+[right.stick]
+action = "mouse"
+# Speed of the mouse in px when moving with this stick
+speed = 10
+
+[right.a]
+# What action to perform when pressed
+action = "mousetoggle"
+# What event to listen to for this button
+on = "change"
+
+[right.zr]
+action = "keypress"
+on = "down"
+key = "a"
