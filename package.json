@@ -7,15 +7,11 @@
   "author": "Jake Hamilton <jake@jakehamilton.dev>",
   "license": "Apache-2.0",
   "bin": "./src/index.js",
-  "scripts": {
-    "postinstall": "patch-package"
-  },
   "dependencies": {
     "arg": "^4.1.0",
-    "patch-package": "^6.1.2",
     "pkg": "^4.4.0",
     "robotjs": "^0.5.1",
-    "switch-joy-con": "^1.1.1",
+    "switch-joy-con": "^1.1.2",
     "toml": "^3.0.0"
   }
 }
