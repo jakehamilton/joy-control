@@ -7,6 +7,9 @@
   "author": "Jake Hamilton <jake@jakehamilton.dev>",
   "license": "Apache-2.0",
   "bin": "./src/index.js",
+  "scripts": {
+    "build": "pkg . --out-path ./dist/"
+  },
   "dependencies": {
     "arg": "^4.1.0",
     "robotjs": "^0.5.1",
