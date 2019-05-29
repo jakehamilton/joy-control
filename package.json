@@ -9,9 +9,11 @@
   "bin": "./src/index.js",
   "dependencies": {
     "arg": "^4.1.0",
-    "pkg": "^4.4.0",
     "robotjs": "^0.5.1",
     "switch-joy-con": "^1.1.2",
     "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
   }
 }
