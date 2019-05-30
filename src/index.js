@@ -4,12 +4,18 @@ const arg = require("arg");
 const toml = require("toml");
 const joycons = require("switch-joy-con");
 
+const help = require("./help");
 const controller = require("./controller");
 
 const args = arg({
   "--config": String,
   "--help": Boolean
 });
+
+if (args["--help"]) {
+  help();
+  process.exit();
+}
 
 if (!args["--config"]) {
   console.error("You must specify a config file.");

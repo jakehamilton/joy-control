@@ -8,9 +8,15 @@ poll = 500
 
 [right]
 [right.stick]
-action = "mouse"
-# Speed of the mouse in px when moving with this stick
-speed = 10
+action = "custom"
+
+[right.stick.up]
+action = "keytoggle"
+key = "0"
+
+[right.stick.upLeft]
+action = "keytoggle"
+key = "b"
 
 [right.a]
 # What action to perform when pressed
@@ -18,7 +24,16 @@ action = "mousetoggle"
 # What event to listen to for this button
 on = "change"
 
-[right.zr]
-action = "keypress"
-on = "down"
+[right.b]
+action = "keytoggle"
+on = "change"
 key = "a"
+modifier = "shift"
+
+[right.zr]
+action = "command"
+command = "echo hi"
+# Optionally allow your spawned program to read the parent process' stdin
+#stdin = true
+# Optionally pass in data to your spawned program
+#input = "name=fluffy&type=cat"

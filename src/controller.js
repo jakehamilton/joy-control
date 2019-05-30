@@ -7,22 +7,11 @@ const LEFT_CONTROLLER_ID = 8198;
 const RIGHT_CONTROLLER_ID = 8199;
 
 const controller = (descriptor, config) => {
-  const type = descriptor.productId;
   const device = descriptor.open();
 
   device.setPlayerLEDs(device.LED_VALUES.ONE);
 
-  let identifier = "left";
-  switch (type) {
-    case LEFT_CONTROLLER_ID:
-      identifier = "left";
-      break;
-    case RIGHT_CONTROLLER_ID:
-      identifier = "right";
-      break;
-  }
-
-  const device_config = config[identifier];
+  const device_config = config[device.side];
 
   let interval = null;
   const loop = () => {
@@ -31,8 +20,8 @@ const controller = (descriptor, config) => {
         joystick.mouse(device, device_config);
         break;
       }
-      case "keypress": {
-        joystick.keypress(device, device_config);
+      case "custom": {
+        joystick.custom(descriptor, device, device_config);
         break;
       }
     }

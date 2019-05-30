@@ -4,115 +4,43 @@ Control your PC with a Joy Con!
 
 ## Installation
 
+### Via Git
+
 1. Clone this repository (`git clone https://github.com/jakehamilton/joy-control`)
 2. Install dependencies (`yarn`)
 
+### Via Release
+
+1. Navigate to [the releases page](https://github.com/jakehamilton/joy-control/releases).
+2. Download the latest release's archive for your platform.
+3. Unpack the archive to somewhere on your machine.
+
 ## Usage
 
-For now, you can run this program using the command `node src/index.js`. Here is an
-example:
+### From Git
+
+You can run the program with the following command.
 
 ```shell
 node src/index.js --config ./config.toml
 ```
 
-You **MUST** supply a config file.
+For detailed usage information, run the following.
 
-## Config
+```shell
+node src/index.js --help
+```
 
-Here is an example config file:
+### From Release
 
-```toml
-[left]
-[left.stick]
-action = "mouse"
-speed = 10
-poll = 33
+Unpack the archive file and run the following in the directory that you put the program.
 
-[left.dpadUp]
-action = "keytoggle"
-on = "change"
-key = "a"
-[left.dpadDown]
-action = "keytoggle"
-on = "change"
-key = "b"
-[left.dpadLeft]
-action = "keytoggle"
-on = "change"
-key = "c"
-[left.dpadRight]
-action = "keytoggle"
-on = "change"
-key = "d"
-[left.minus]
-action = "keytoggle"
-on = "change"
-key = "e"
-[left.screenshot]
-action = "keytoggle"
-on = "change"
-key = "f"
-[left.sl]
-action = "keytoggle"
-on = "change"
-key = "g"
-[left.sr]
-action = "keytoggle"
-on = "change"
-key = "h"
-[left.l]
-action = "keytoggle"
-on = "change"
-key = "i"
-[left.zl]
-action = "keytoggle"
-on = "change"
-key = "j"
+```shell
+joy-control --config ./config.toml
+```
 
-[right]
-[right.stick]
-action = "mouse"
-speed = 20
+For detailed usage information, run the following.
 
-[right.a]
-action = "keytoggle"
-on = "change"
-key = "k"
-[right.x]
-action = "keytoggle"
-on = "change"
-key = "l"
-[right.b]
-action = "keytoggle"
-on = "change"
-key = "m"
-[right.y]
-action = "keytoggle"
-on = "change"
-key = "n"
-[right.plus]
-action = "keytoggle"
-on = "change"
-key = "o"
-[right.home]
-action = "keytoggle"
-on = "change"
-key = "p"
-[right.sl]
-action = "keytoggle"
-on = "change"
-key = "q"
-[right.sr]
-action = "keytoggle"
-on = "change"
-key = "s"
-[right.r]
-action = "keytoggle"
-on = "change"
-key = "t"
-[right.zr]
-action = "keytoggle"
-on = "change"
-key = "u"
+```shell
+joy-control --help
 ```
